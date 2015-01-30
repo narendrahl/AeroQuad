@@ -1250,8 +1250,8 @@ void readSerialCommand() {
        { 
          if(msg.msgid == 33)
            {
-         long p  = mavlink_msg_global_position_int_get_lat(&msg);
-         long q  = mavlink_msg_global_position_int_get_lon(&msg);
+         long p  = mavlink_msg_global_position_int_get_lat(&msg); // Leader's Latitude
+         long q  = mavlink_msg_global_position_int_get_lon(&msg); // Leader's Longitude
 
          readWaypointLF.latitude = p ;
          readWaypointLF.longitude = q ;
